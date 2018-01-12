@@ -15,7 +15,7 @@ defimpl Apex.Format, for: BitString do
   import Apex.Format.Utils
 
   def format(data, options \\ []) do
-    colorize("\"#{data}\"", data, options) <> new_line
+    colorize("#{inspect data}", data, options) <> new_line()
   end
 end
 
